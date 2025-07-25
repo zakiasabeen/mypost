@@ -118,8 +118,13 @@ loginWithGoogle &&
             :window.location.origin + "/post-application/"
 			
             const {error} = await client.auth.signInWithOAuth({
-                provider:google
-            })
+                provider:google,
+                options:{
+                    redirectTo: redirectTo,
+                    queryParams: { access_type: "offline",prompt: "consent"},
+                }
+        
+            });
             
             if (error) throw error;
 		} catch (error) {
