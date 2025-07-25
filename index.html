@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-------CSS file link----->
+    <link rel="stylesheet" href="style.css" />
+    <title>Signup-page</title>
+
+    <!----------------Tailwind CSS CDN-------------->
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-------------Font Awesome CDN----------------->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    
+  </head>
+  <body class="min-h-screen flex item-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md space-y-6">
+      <div class="text-center">
+        <h1 class="text-3xl font-bold text-gray-800 mt-4">Creat Account</h1>
+        <p class="text-gray-500 mt-2">Join Our Community today</p>
+
+        <div>
+          <label class="block text-gray-600 mb-2" for="signup-email"
+            >Email Address</label
+          >
+          <input
+            type="email"
+            id="signup-id"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div>
+          <label class="block text-gray-600 my-1" for="signup-password"
+            >Password</label
+          >
+          <div class="relative">
+            <input
+              type="password"
+              id="signup-password"
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 pr-10"
+              placeholder="Creat a password"
+            />
+
+            <button
+              type="button"
+              id="togglePassword"
+              class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-700 text-lg"
+            >
+              <i class="fa-solid fa-eye" id="eyeIcon"></i>
+            </button>
+          </div>
+          <p class="text-xs text-gray-500 my-1">Use 6 or more characters</p>
+        </div>
+        <button
+          id="signupBtn"
+          class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition duration-300 flex items-center justify-center gap-2"
+        >
+          <span id="signupText">Sign Up</span>
+        </button>
+
+        <div class="flex items-center my-4">
+          <div class="flex-1 border-t border-gray-300"></div>
+          <span class="px-4 text-gray-500">or</span>
+          <div class="flex-1 border-t border-gray-300"></div>
+        </div>
+
+        <button
+          id="loginWithGoogle"
+          class="w-full bg-white text-gray-700 py-2 rounded-lg border border-gray-300 hover:bg-gray-50 transition duration-300 flex items-center justify-center gap-2"
+        >
+          <img
+            src="https://www.google.com/favicon.ico"
+            alt="Google"
+            class="w-5 h-5"
+          />
+          <span>Continue with Google</span>
+        </button>
+
+        <button
+          id="loginWithGitHub"
+          class="w-full bg-white text-gray-700 py-2 mt-4 rounded-lg border border-gray-300 hover:bg-gray-50 transition duration-300 flex items-center justify-center gap-2"
+        >
+          <img
+            src="https://www.Github.com/favicon.ico"
+            alt="Github"
+            class="w-5 h-5"
+          />
+          <span>Continue with Github</span>
+        </button>
+       
+       <button
+          id="loginWithfacebook"
+          class="w-full bg-white text-gray-700 py-2 mt-4 rounded-lg border border-gray-300 hover:bg-gray-50 transition duration-300 flex items-center justify-center gap-2"
+        >
+          <img
+            src="https://www.facebook.com/favicon.ico"
+            alt="facebook"
+            class="w-5 h-5"
+          />
+          <span>Continue with facebook</span>
+        </button>
+       
+        <div class="text-center text-sm text-gray-600">
+          Already have an account?
+          <a
+            href="./login.html"
+            class="text-indigo-600 hover:text-indigo-800 font-medium"
+          >
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- SweetAlert2 for notifications -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Our JS -->
+    <script src="app.js"></script>
+  </body>
+</html>
